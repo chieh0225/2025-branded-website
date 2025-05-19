@@ -1,0 +1,32 @@
+body {
+  font-family: "Noto Sans TC", sans-serif !important;
+  line-height: 1.5;
+  background-color: #fbfbfb;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge-font {
+  font-size: 1rem !important;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.badge-primary {
+  background-color: $primary !important;
+  border-radius: $border-radius-pill !important;
+  padding: 6px 12px !important;
+  height: auto;
+}

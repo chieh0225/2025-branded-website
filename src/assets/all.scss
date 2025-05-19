@@ -1,0 +1,22 @@
+// 全域
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+@import "bootstrap/scss/functions";
+@import "./scss/variables";
+@import "bootstrap/scss/bootstrap.scss";
+
+@import "bootstrap/scss/utilities/api";
+
+@import "./scss/base";
+
+// 元件
+@import "./scss/component/btn";
+@import "./scss/component/pagination";
+
+// Layout
+@import "./scss/layout/header";
+@import "./scss/layout/footer";
+
+// 頁面
+@import "./scss/pages/homePage";
+@import "./scss/pages/blogPage";

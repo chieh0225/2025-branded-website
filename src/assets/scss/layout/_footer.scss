@@ -1,0 +1,28 @@
+.footer {
+  border-top: 1px #6c757d solid;
+}
+
+.contact {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  address {
+    margin-bottom: 0;
+    .email {
+      color: #000000;
+      font-size: $h2-font-size;
+      font-weight: $font-weight-medium;
+    }
+  }
+  .socialMedia {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.copyright {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}

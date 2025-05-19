@@ -1,0 +1,25 @@
+.articleList {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.card {
+  border: none !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: transparent !important;
+  .card-img-top {
+    border-radius: 0;
+  }
+  .card-body {
+    padding-left: 0;
+    padding-right: 0;
+    .card-text {
+      color: #4b4b4b;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 設定顯示 2 行 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}

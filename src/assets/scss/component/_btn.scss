@@ -1,0 +1,9 @@
+.btn-main {
+  color: #4b4b4b !important;
+  border: 1px solid #000000 !important;
+  border-radius: $border-radius-pill !important;
+  &:hover {
+    color: #ffffff !important;
+    background-color: #4b4b4b;
+  }
+}
