@@ -118,7 +118,7 @@ function BlogPage() {
     <main className="articleList">
       <div className="row">
         {data.map((article, i) => (
-          <div className="col-4" key={i}>
+          <div className="col-md-6 col-xl-4" key={i}>
             <div className="card h-100">
               <img
                 src={`${import.meta.env.BASE_URL}${article.img}`}
@@ -130,25 +130,27 @@ function BlogPage() {
                   {article.time}
                 </time>
                 <div className="d-flex">
-                  <p className="fs-4 fw-medium text-primary">
+                  <p className="fs-4 fw-medium text-primary text-nowrap">
                     {article.hashtag1}
                   </p>
                   <span>&nbsp;</span>
-                  <p className="fs-4 fw-medium text-primary me-2">
+                  <p className="fs-4 fw-medium text-primary text-nowrap me-2">
                     {article.hashtag2}
                   </p>
                   {article.badge && (
-                    <h6 className="mb-0 align-bottom badge-font badge-primary">
+                    <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
                       {article.badge}
                     </h6>
                   )}
                 </div>
-                <h3 className="card-title fw-bold mb-2">{article.title}</h3>
-                <p className="card-text mb-3">{article.content}</p>
-                <a href="#" className="btn btn-main">
-                  閱讀內文
-                </a>
+                <div>
+                  <h3 className="card-title fw-bold mb-2">{article.title}</h3>
+                  <p className="card-text mb-3">{article.content}</p>
+                </div>
               </div>
+              <a href="#" className="btn btn-main align-self-start">
+                閱讀內文
+              </a>
             </div>
           </div>
         ))}
