@@ -1,5 +1,17 @@
 import Pagination from "../components/Pagination";
 
+const latestArticle = {
+  img: "/images/desktop/blog/aboutSection.png",
+  alt: "About Section",
+  time: "2024/10/21",
+  hashtag1: "前端開發 x 職涯成長",
+  hashtag2: "",
+  badge: "最新文章",
+  title: "自學前端不用怕：從零開始的三大關鍵",
+  content: `嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」
+其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！`,
+};
+
 const data = [
   {
     img: "/images/desktop/blog/photo4.png",
@@ -115,47 +127,161 @@ const data = [
 
 function BlogPage() {
   return (
-    <main className="articleList">
-      <div className="row">
-        {data.map((article, i) => (
-          <div className="col-md-6 col-xl-4" key={i}>
-            <div className="card h-100">
-              <img
-                src={`${import.meta.env.BASE_URL}${article.img}`}
-                className="card-img-top"
-                alt="..."
+    <main>
+      <section className="container-fluid px-0 heroSection">
+        <div className="row g-0">
+          <div className="col-md-6">
+            <picture>
+              <source
+                media="(min-width: 375px)"
+                srcset={`${
+                  import.meta.env.BASE_URL
+                }/images/desktop/index/heroSection.png`}
               />
-              <div className="card-body">
-                <time dateTime={article.time} className="d-block mb-1">
-                  {article.time}
-                </time>
-                <div className="d-flex">
-                  <p className="fs-4 fw-medium text-primary text-nowrap">
-                    {article.hashtag1}
-                  </p>
-                  <span>&nbsp;</span>
-                  <p className="fs-4 fw-medium text-primary text-nowrap me-2">
-                    {article.hashtag2}
-                  </p>
-                  {article.badge && (
-                    <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
-                      {article.badge}
-                    </h6>
-                  )}
-                </div>
-                <div>
-                  <h3 className="card-title fw-bold mb-2">{article.title}</h3>
-                  <p className="card-text mb-3">{article.content}</p>
-                </div>
+              <img
+                src={`${
+                  import.meta.env.BASE_URL
+                }/images/mobile/index/heroSection.png`}
+                alt="人物照片"
+                className="img-fluid w-100"
+              />
+            </picture>
+          </div>
+          <div className="col-md-6 position-relative heroSection2">
+            <picture>
+              <source
+                media="(min-width: 375px)"
+                srcset={`${
+                  import.meta.env.BASE_URL
+                }/images/desktop/index/heroSection2.png`}
+              />
+              <img
+                src={`${
+                  import.meta.env.BASE_URL
+                }/images/mobile/index/heroSection2.png`}
+                alt="背景照片"
+                className="img-fluid w-100 object-fit-cover heroImg2"
+              />
+            </picture>
+            <div className="position-absolute top-50 start-10 translate-middle-y heroSectionText">
+              <h1 className="title">BLOG</h1>
+              <p className="about">前端工程師 & 職涯諮詢師</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid px-0 latestArticle">
+        <div className="row g-0 align-items-center">
+          <div className="col-md-6">
+            <picture>
+              <source
+                media="(min-width: 375px)"
+                srcset={`${
+                  import.meta.env.BASE_URL
+                }/images/desktop/blog/aboutSection.png`}
+              />
+              <img
+                src={`${
+                  import.meta.env.BASE_URL
+                }/images/mobile/blog/aboutSection.png`}
+                alt={latestArticle.alt}
+                className="img-fluid w-100 object-fit-cover"
+              />
+            </picture>
+          </div>
+          <div className="col-md-6">
+            <div className="content-wrapper">
+              <time dateTime={latestArticle.time} className="d-block mb-1">
+                {latestArticle.time}
+              </time>
+              <div className="d-flex gap-2 mb-2">
+                <a href="#" className="fs-4 fw-medium text-primary text-nowrap">
+                  {latestArticle.hashtag1}
+                </a>
+                <a
+                  href="#"
+                  className="fs-4 fw-medium text-primary text-nowrap me-2"
+                >
+                  {latestArticle.hashtag2}
+                </a>
+                {latestArticle.badge && (
+                  <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
+                    {latestArticle.badge}
+                  </h6>
+                )}
               </div>
+              <h3 className="fw-bold mb-2">{latestArticle.title}</h3>
+              <p className="mb-3 content-text">{latestArticle.content}</p>
               <a href="#" className="btn btn-main align-self-start">
                 閱讀內文
               </a>
             </div>
           </div>
-        ))}
-      </div>
-      <Pagination />
+        </div>
+      </section>
+
+      <section className="container articleList">
+        <div className="row">
+          <div className="col-md-6 col-xl-4">
+            <div className="search-wrapper">
+              <i className="bi bi-search fs-4"></i>
+              <input
+                type="search"
+                className="search-input"
+                placeholder="搜尋你感興趣的文章"
+                aria-label="Search"
+              />
+            </div>
+          </div>
+        </div>
+
+        <ul className="row">
+          {data.map((article, i) => (
+            <li className="col-md-6 col-xl-4" key={i}>
+              <div className="card h-100">
+                <img
+                  src={`${import.meta.env.BASE_URL}${article.img}`}
+                  className="card-img-top"
+                  alt="..."
+                />
+                <div className="card-body">
+                  <time dateTime={article.time} className="d-block mb-1">
+                    {article.time}
+                  </time>
+                  <div className="d-flex gap-2">
+                    <a
+                      href="#"
+                      className="fs-4 fw-medium text-primary text-nowrap"
+                    >
+                      {article.hashtag1}
+                    </a>
+                    <a
+                      href="#"
+                      className="fs-4 fw-medium text-primary text-nowrap"
+                    >
+                      {article.hashtag2}
+                    </a>
+                    {article.badge && (
+                      <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
+                        {article.badge}
+                      </h6>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="card-title fw-bold mb-2">{article.title}</h3>
+                    <p className="card-text mb-3">{article.content}</p>
+                  </div>
+                </div>
+                <a href="#" className="btn btn-main align-self-start">
+                  閱讀內文
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <Pagination />
+      </section>
     </main>
   );
 }

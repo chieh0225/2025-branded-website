@@ -1,0 +1,10 @@
+.header {
+  color: #000000;
+  font-size: $h3-font-size;
+  .headerNav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 24px 0px;
+  }
+}

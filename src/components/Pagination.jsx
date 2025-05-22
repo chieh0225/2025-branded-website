@@ -13,7 +13,9 @@ function Pagination() {
           </a>
         </li>
         <li className="page-item" aria-current="page">
-          <span className="page-link">2</span>
+          <a className="page-link" href="#">
+            2
+          </a>
         </li>
         <li className="page-item">
           <a className="page-link" href="#">

@@ -1,9 +1,15 @@
 function Header() {
   return (
-    <nav>
-      <a href="#">首頁</a>
-      <a href="#">部落格</a>
-    </nav>
+    <header className="header">
+      <nav className="headerNav fw-bold">
+        <a href="#" className="homePageLink">
+          首頁
+        </a>
+        <a href="#" className="blogPageLink">
+          部落格
+        </a>
+      </nav>
+    </header>
   );
 }
 
