@@ -185,7 +185,7 @@ function BlogPage() {
                   import.meta.env.BASE_URL
                 }/images/mobile/blog/aboutSection.png`}
                 alt={latestArticle.title}
-                className="h-100 img-fluid object-fit-cover"
+                className="h-100 w-100 img-fluid object-fit-cover"
               />
             </picture>
           </div>
