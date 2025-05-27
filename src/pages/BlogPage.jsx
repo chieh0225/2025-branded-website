@@ -2,7 +2,6 @@ import Pagination from "../components/Pagination";
 
 const latestArticle = {
   img: "/images/desktop/blog/aboutSection.png",
-  alt: "About Section",
   time: "2024/10/21",
   hashtag1: "前端開發 x 職涯成長",
   hashtag2: "",
@@ -172,7 +171,7 @@ function BlogPage() {
       </section>
 
       <section className="container-fluid px-0 latestArticle">
-        <div className="row g-0 align-items-center">
+        <div className="row g-0">
           <div className="col-md-6">
             <picture>
               <source
@@ -185,37 +184,44 @@ function BlogPage() {
                 src={`${
                   import.meta.env.BASE_URL
                 }/images/mobile/blog/aboutSection.png`}
-                alt={latestArticle.alt}
-                className="img-fluid w-100 object-fit-cover"
+                alt={latestArticle.title}
+                className="h-100 img-fluid object-fit-cover"
               />
             </picture>
           </div>
           <div className="col-md-6">
-            <div className="content-wrapper">
-              <time dateTime={latestArticle.time} className="d-block mb-1">
-                {latestArticle.time}
-              </time>
-              <div className="d-flex gap-2 mb-2">
-                <a href="#" className="fs-4 fw-medium text-primary text-nowrap">
-                  {latestArticle.hashtag1}
+            <div className="d-flex h-100">
+              <div className="content-wrapper my-auto">
+                <time dateTime={latestArticle.time} className="d-block mb-1">
+                  {latestArticle.time}
+                </time>
+                <div className="d-flex gap-2 mb-2">
+                  <a
+                    href="#"
+                    className="fs-4 fw-medium text-primary text-nowrap"
+                  >
+                    {latestArticle.hashtag1}
+                  </a>
+                  {latestArticle.hashtag2 && (
+                    <a
+                      href="#"
+                      className="fs-4 fw-medium text-primary text-nowrap me-2"
+                    >
+                      {latestArticle.hashtag2}
+                    </a>
+                  )}
+                  {latestArticle.badge && (
+                    <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
+                      {latestArticle.badge}
+                    </h6>
+                  )}
+                </div>
+                <h3 className="fw-bold mb-2">{latestArticle.title}</h3>
+                <p className="mb-3 content-text">{latestArticle.content}</p>
+                <a href="#" className="btn btn-main align-self-start">
+                  閱讀內文
                 </a>
-                <a
-                  href="#"
-                  className="fs-4 fw-medium text-primary text-nowrap me-2"
-                >
-                  {latestArticle.hashtag2}
-                </a>
-                {latestArticle.badge && (
-                  <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
-                    {latestArticle.badge}
-                  </h6>
-                )}
               </div>
-              <h3 className="fw-bold mb-2">{latestArticle.title}</h3>
-              <p className="mb-3 content-text">{latestArticle.content}</p>
-              <a href="#" className="btn btn-main align-self-start">
-                閱讀內文
-              </a>
             </div>
           </div>
         </div>
@@ -224,8 +230,8 @@ function BlogPage() {
       <section className="container articleList">
         <div className="row">
           <div className="col-md-6 col-xl-4">
-            <div className="search-wrapper">
-              <i className="bi bi-search fs-4"></i>
+            <div className="search-wrapper d-flex align-items-center">
+              <i className="bi bi-search fs-4 d-flex"></i>
               <input
                 type="search"
                 className="search-input"
@@ -243,7 +249,7 @@ function BlogPage() {
                 <img
                   src={`${import.meta.env.BASE_URL}${article.img}`}
                   className="card-img-top"
-                  alt="..."
+                  alt={article.title}
                 />
                 <div className="card-body">
                   <time dateTime={article.time} className="d-block mb-1">

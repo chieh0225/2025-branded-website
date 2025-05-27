@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 @import "bootstrap/scss/functions";
-@import "./scss/variables";
+@import "./scss/utils/variables";
 @import "bootstrap/scss/bootstrap.scss";
 
 @import "bootstrap/scss/utilities/api";
 
-@import "./scss/base";
+@import "./scss/base/base";
 
 // 元件
 @import "./scss/component/btn";
