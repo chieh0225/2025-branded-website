@@ -1,12 +1,16 @@
 .header {
-  color: #000000;
-  font-size: $h3-font-size;
   .headerNav {
     display: flex;
     justify-content: center;
     gap: 40px;
     a {
       padding: 24px 0px;
+      color: inherit;
+      font-size: $h3-font-size;
+      &:hover,
+      &.active {
+        color: $primary !important;
+      }
     }
   }
 }

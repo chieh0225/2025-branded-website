@@ -5,6 +5,8 @@
       color: $primary;
       font-size: 120px;
       font-weight: 900;
+      text-wrap: nowrap;
+      margin-bottom: 12px;
     }
     .about {
       color: $primary;
@@ -12,9 +14,23 @@
       font-weight: $font-weight-bold;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1920px) {
     .heroSectionText {
       margin-left: 40px;
+      .title {
+        font-size: 100px;
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    .heroSectionText {
+      .title {
+        font-size: 80px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .heroSectionText {
       .title {
         font-size: 52px;
       }
@@ -62,9 +78,9 @@
 }
 
 .articleList {
-  margin-top: 80px;
-  margin-bottom: 80px;
-
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px #6c757d solid;
   .search-wrapper {
     box-sizing: border-box;
     height: 56px;
@@ -113,6 +129,21 @@
       -webkit-line-clamp: 2; /* 設定顯示 2 行 */
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+  }
+}
+
+.contact {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  address {
+    margin-bottom: 0;
+    .email {
+      color: #000000;
+      font-size: $h2-font-size;
     }
   }
 }

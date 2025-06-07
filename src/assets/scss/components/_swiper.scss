@@ -1,0 +1,68 @@
+.swiper-outer-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+// .swiper-button-wrapper {
+//   padding-right: 12px;
+//   padding-left: 12px;
+// }
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  top: 55% !important;
+  transform: translateY(-50%) !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin-top: 0 !important;
+}
+
+.swiper-button-prev {
+  left: 0px !important;
+}
+
+.swiper-button-next {
+  right: 0px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::before {
+  content: "\F129";
+  font-family: "bootstrap-icons";
+  font-size: 44px;
+  color: $primary;
+  line-height: 1;
+}
+
+.swiper-button-next::before {
+  content: "\F133";
+  font-family: "bootstrap-icons";
+  font-size: 44px;
+  color: $primary;
+  line-height: 1;
+}
+
+@media (max-width: 1500px) {
+  .swiper-button-wrapper {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+}

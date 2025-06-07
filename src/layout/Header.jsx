@@ -1,13 +1,21 @@
+import { NavLink } from "react-router-dom";
+
 function Header() {
   return (
     <header className="header">
       <nav className="headerNav fw-bold">
-        <a href="#" className="homePageLink">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           首頁
-        </a>
-        <a href="#" className="blogPageLink">
+        </NavLink>
+        <NavLink
+          to="/blogPage"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           部落格
-        </a>
+        </NavLink>
       </nav>
     </header>
   );

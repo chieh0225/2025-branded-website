@@ -1,0 +1,348 @@
+.homePage {
+  .heroSection2 {
+    background-image: url("/images/desktop/index/heroSection2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 356px;
+  }
+}
+
+.heroSection3 {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  width: 56%;
+  position: relative;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: 80px;
+  margin-top: -160px;
+  font-size: $h3-font-size;
+}
+
+.service {
+  padding: 80px 0;
+  .getInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    color: #000000;
+    p {
+      font-size: $h3-font-size;
+      font-weight: 700;
+    }
+    .bi-arrow-right::before {
+      padding: 8px;
+      border: 1px solid #000000;
+      border-radius: $border-radius-pill;
+    }
+    &:hover {
+      color: $primary;
+      .bi-arrow-right::before {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        background: $primary;
+      }
+    }
+  }
+}
+
+.blogFeatured {
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
+  .feature-wrapper {
+    position: relative;
+    overflow: visible;
+    max-width: 1432px;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.successCases {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #6c757d;
+  .sectionHeading {
+    display: flex;
+    text-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .caseTop-outer-wrapper {
+    margin-bottom: 40px;
+  }
+  .column-custom-7 {
+    max-width: 745px;
+  }
+  .img-wrapper {
+    padding: 24px;
+    background-color: #ededed;
+  }
+  .column-custom-5 {
+    max-width: 526px;
+  }
+  .content-wrapper {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+  .contentTop-wrapper {
+    max-width: 526px;
+    background-color: #ffffff;
+    padding: 80px 40px;
+    margin-left: -195px;
+  }
+  .contentBottom-wrapper {
+    max-width: 526px;
+    background-color: #f5f5f5;
+    padding: 80px 40px;
+    margin-top: -40px;
+  }
+  .bi-dash-lg::before {
+    color: $primary;
+    font-size: 40px;
+  }
+  .caseBottom-outer-wrapper {
+    padding: 24px;
+    background-color: #f5f5f5;
+    .caseCard {
+      max-width: 294px;
+    }
+  }
+  .caseInfo {
+    .text {
+      border-bottom: 1px solid #6c757d;
+    }
+    .text p:not(:first-child) {
+      color: #4b4b4b;
+    }
+    .text p:not(:last-child) {
+      padding-bottom: 8px;
+    }
+    .bi-check-square-fill::before {
+      color: $primary;
+    }
+  }
+}
+
+.emailSubscribe {
+  border-bottom: 1px solid #6c757d;
+  .col-md-6 {
+    min-height: 375px;
+  }
+  .emailSubscribeBg {
+    background-image: url("/images/desktop/index/heroSection2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+  }
+  .emailSubscribeText {
+    max-width: 800px;
+    width: 100%;
+    padding: 80px;
+    background-color: #ffffff;
+    input {
+      color: #4b4b4b;
+      background-color: #f1f1f1 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 8px 16px !important;
+    }
+  }
+}
+
+.contactMe {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px #6c757d solid;
+  address {
+    margin-bottom: 0;
+    color: #000000 !important;
+    &:hover {
+      color: $primary !important;
+    }
+    .email {
+      color: inherit;
+      font-size: $h2-font-size;
+      .text {
+        font-size: $h3-font-size;
+      }
+    }
+    .addressContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 16px;
+      width: 100%;
+      border-bottom: 1px solid #000000;
+      div {
+        display: flex;
+        gap: 16px;
+      }
+    }
+    .text-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .mediaLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    &:hover {
+      color: $primary !important;
+    }
+    span {
+      color: inherit;
+    }
+  }
+  .mediaInfo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    span {
+      font-size: $h3-font-size;
+    }
+  }
+  .bi-arrow-right::before {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .feature-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1400px) {
+  .heroSection3 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .contentTop-wrapper,
+  .contentBottom-wrapper {
+    padding: 40px 24px;
+  }
+  .caseBottom-outer-wrapper {
+    .caseList {
+      flex-wrap: wrap;
+    }
+    .caseCard {
+      max-width: calc(50% - 24px) !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contentTop-wrapper {
+    margin-left: -96px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px !important;
+  }
+  .service {
+    .getInfo {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  .caseTop-outer-wrapper {
+    flex-direction: column;
+    .column-custom-7 {
+      max-width: none !important;
+    }
+    .column-custom-5 {
+      max-width: none !important;
+    }
+    .content-wrapper {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .contentTop-wrapper {
+      max-width: none !important;
+      margin-left: 0 !important;
+    }
+    .contentBottom-wrapper {
+      max-width: none !important;
+      margin-top: 0px !important;
+    }
+  }
+  .emailSubscribeText {
+    padding: 80px 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionHeading {
+    font-size: 48px;
+  }
+  .feature-wrapper {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    flex-direction: column;
+  }
+  .caseBottom-outer-wrapper {
+    .caseCard {
+      max-width: none !important;
+      width: 100%;
+    }
+  }
+  .contactMe {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    address {
+      .email {
+        font-size: $h4-font-size;
+        .text {
+          font-size: $h4-font-size;
+        }
+      }
+    }
+    .mediaInfo {
+      span {
+        font-size: $h4-font-size;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .heroSectionText {
+    top: 28% !important;
+  }
+  .heroSection3 {
+    width: calc(100% - 24px) !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 24px;
+    margin-top: -160px;
+    font-size: $h4-font-size;
+  }
+}
+
+@media (max-width: 576px) {
+  .successCases {
+    .sectionHeading {
+      flex-direction: column;
+    }
+  }
+  .contactMe address .text-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .emailSubscribeText {
+    padding: 40px 24px !important;
+  }
+}

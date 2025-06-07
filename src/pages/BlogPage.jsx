@@ -1,4 +1,5 @@
 import Pagination from "../components/Pagination";
+import MediaIcons from "../components/MediaIcons";
 
 const latestArticle = {
   img: "/images/desktop/blog/aboutSection.png",
@@ -124,7 +125,7 @@ const data = [
   },
 ];
 
-function BlogPage() {
+export default function BlogPage() {
   return (
     <main>
       <section className="container-fluid px-0 heroSection">
@@ -227,69 +228,82 @@ function BlogPage() {
         </div>
       </section>
 
-      <section className="container articleList">
-        <div className="row">
-          <div className="col-md-6 col-xl-4">
-            <div className="search-wrapper d-flex align-items-center">
-              <i className="bi bi-search fs-4 d-flex"></i>
-              <input
-                type="search"
-                className="search-input"
-                placeholder="搜尋你感興趣的文章"
-                aria-label="Search"
-              />
+      <section className="articleList">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-xl-4">
+              <div className="search-wrapper d-flex align-items-center">
+                <i className="bi bi-search fs-4 d-flex"></i>
+                <input
+                  type="search"
+                  className="search-input"
+                  placeholder="搜尋你感興趣的文章"
+                  aria-label="Search"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <ul className="row">
-          {data.map((article, i) => (
-            <li className="col-md-6 col-xl-4" key={i}>
-              <div className="card h-100">
-                <img
-                  src={`${import.meta.env.BASE_URL}${article.img}`}
-                  className="card-img-top"
-                  alt={article.title}
-                />
-                <div className="card-body">
-                  <time dateTime={article.time} className="d-block mb-1">
-                    {article.time}
-                  </time>
-                  <div className="d-flex gap-2">
-                    <a
-                      href="#"
-                      className="fs-4 fw-medium text-primary text-nowrap"
-                    >
-                      {article.hashtag1}
-                    </a>
-                    <a
-                      href="#"
-                      className="fs-4 fw-medium text-primary text-nowrap"
-                    >
-                      {article.hashtag2}
-                    </a>
-                    {article.badge && (
-                      <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
-                        {article.badge}
-                      </h6>
-                    )}
+          <ul className="row">
+            {data.map((article, i) => (
+              <li className="col-md-6 col-xl-4" key={i}>
+                <div className="card h-100">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${article.img}`}
+                    className="card-img-top"
+                    alt={article.title}
+                  />
+                  <div className="card-body">
+                    <time dateTime={article.time} className="d-block mb-1">
+                      {article.time}
+                    </time>
+                    <div className="d-flex gap-2">
+                      <a
+                        href="#"
+                        className="fs-4 fw-medium text-primary text-nowrap"
+                      >
+                        {article.hashtag1}
+                      </a>
+                      <a
+                        href="#"
+                        className="fs-4 fw-medium text-primary text-nowrap"
+                      >
+                        {article.hashtag2}
+                      </a>
+                      {article.badge && (
+                        <h6 className="mb-0 align-bottom badge-font badge-primary text-nowrap">
+                          {article.badge}
+                        </h6>
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="card-title fw-bold mb-2">
+                        {article.title}
+                      </h3>
+                      <p className="card-text mb-3">{article.content}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="card-title fw-bold mb-2">{article.title}</h3>
-                    <p className="card-text mb-3">{article.content}</p>
-                  </div>
+                  <a href="#" className="btn btn-main align-self-start">
+                    閱讀內文
+                  </a>
                 </div>
-                <a href="#" className="btn btn-main align-self-start">
-                  閱讀內文
-                </a>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <Pagination />
+              </li>
+            ))}
+          </ul>
+          <Pagination />
+        </div>
       </section>
+
+      <div className="container">
+        <div className="contact d-none d-md-flex">
+          <address>
+            <a href="mailto:alysewang@hexschool.com" className="email">
+              alysewang@hexschool.com
+            </a>
+          </address>
+          <MediaIcons />
+        </div>
+      </div>
     </main>
   );
 }
-
-export default BlogPage;

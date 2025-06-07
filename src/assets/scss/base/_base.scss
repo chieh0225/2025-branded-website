@@ -20,6 +20,28 @@ li {
   list-style: none;
 }
 
+.text-primary {
+  color: $primary;
+}
+
+.text-gray {
+  color: #4b4b4b;
+}
+
+.highlight {
+  color: $primary;
+}
+
+.sectionHeading {
+  font-size: 64px;
+  text-wrap: nowrap;
+}
+
+.mediaIcons {
+  display: flex;
+  gap: 4px;
+}
+
 .badge-font {
   font-size: 1rem !important;
   line-height: 1.5;

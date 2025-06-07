@@ -10,8 +10,10 @@
 @import "./scss/base/base";
 
 // 元件
-@import "./scss/component/btn";
-@import "./scss/component/pagination";
+@import "./scss/components/btn";
+@import "./scss/components/pagination";
+@import "./scss/components/swiper";
+@import "./scss/components/serviceList";
 
 // Layout
 @import "./scss/layout/header";

@@ -4,7 +4,7 @@ function Pagination() {
       <ul className="pagination justify-content-center">
         <li className="page-item">
           <span className="page-link">
-            <i class="bi bi-chevron-left"></i>
+            <i className="bi bi-chevron-left"></i>
           </span>
         </li>
         <li className="page-item active">
@@ -39,7 +39,7 @@ function Pagination() {
         </li>
         <li className="page-item">
           <span className="page-link">
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
           </span>
         </li>
       </ul>
