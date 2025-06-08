@@ -66,7 +66,7 @@ const socialMedia = [
   },
 ];
 
-export default function HomePage() {
+function HomePage() {
   return (
     <main className="homePage">
       <section className="container-fluid px-0 heroSection">
@@ -75,7 +75,7 @@ export default function HomePage() {
             <picture>
               <source
                 media="(min-width: 375px)"
-                srcset={`${
+                srcSet={`${
                   import.meta.env.BASE_URL
                 }/images/desktop/index/heroSection.png`}
               />
@@ -153,7 +153,7 @@ export default function HomePage() {
                 <picture>
                   <source
                     media="(min-width: 375px)"
-                    srcset={`${
+                    srcSet={`${
                       import.meta.env.BASE_URL
                     }/images/desktop/index/photo8.png`}
                   />
@@ -203,13 +203,13 @@ export default function HomePage() {
                       <p className="fs-4 fw-bolder">{item.title}</p>
                       <p>
                         <span className="pe-2">
-                          <i class="bi bi-check-square-fill"></i>
+                          <i className="bi bi-check-square-fill"></i>
                         </span>
                         {item.content1}
                       </p>
                       <p>
                         <span className="pe-2">
-                          <i class="bi bi-check-square-fill"></i>
+                          <i className="bi bi-check-square-fill"></i>
                         </span>
                         {item.content2}
                       </p>
@@ -236,7 +236,7 @@ export default function HomePage() {
               <picture>
                 <source
                   media="(max-width: 375px)"
-                  srcset={`${
+                  srcSet={`${
                     import.meta.env.BASE_URL
                   }/images/mobile/index/photo9.png`}
                 />
@@ -262,11 +262,13 @@ export default function HomePage() {
                       type="text"
                       className="form-control fs-5 mb-2"
                       placeholder="請輸入您的大名"
+                      required
                     />
                     <input
                       type="email"
                       className="form-control fs-5 mb-4"
                       placeholder="請輸入您的電子信箱"
+                      required
                     />
                     <button
                       type="submit"
@@ -303,8 +305,8 @@ export default function HomePage() {
             </a>
           </address>
           <ul className="socialMedia">
-            {socialMedia.map((socialMedia) => (
-              <li className="d-flex">
+            {socialMedia.map((socialMedia, i) => (
+              <li className="d-flex" key={i}>
                 <a href={socialMedia.link} className="mediaLink">
                   <div className="mediaInfo">
                     <img
@@ -327,3 +329,5 @@ export default function HomePage() {
     </main>
   );
 }
+
+export default HomePage;

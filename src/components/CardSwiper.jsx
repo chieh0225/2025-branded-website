@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -6,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 function CardSwiper() {
-  const [carouselData] = useState([
+  const carouselData = [
     {
       img: "/images/desktop/blog/photo4.png",
       time: "2024/10/11",
@@ -117,7 +116,7 @@ function CardSwiper() {
       content:
         "寫程式容易，但要確保程式在多種情境、裝置都能正常運行就沒那麼簡單了。這時「測試」便成了維持程式品質的關鍵環節。從最基礎的單元測試，到模擬使用者行為的端對端測試，每一種測試方式都有它的價值與最佳應用情境。本文將帶你認識不同類型的前端測試工具，以及如何在開發流程中實踐自動化測試，打造更穩定、可預期的專案。",
     },
-  ]);
+  ];
 
   return (
     <div className="swiper-outer-wrapper">

@@ -125,7 +125,7 @@ const data = [
   },
 ];
 
-export default function BlogPage() {
+function BlogPage() {
   return (
     <main>
       <section className="container-fluid px-0 heroSection">
@@ -134,7 +134,7 @@ export default function BlogPage() {
             <picture>
               <source
                 media="(min-width: 375px)"
-                srcset={`${
+                srcSet={`${
                   import.meta.env.BASE_URL
                 }/images/desktop/index/heroSection.png`}
               />
@@ -151,7 +151,7 @@ export default function BlogPage() {
             <picture>
               <source
                 media="(min-width: 375px)"
-                srcset={`${
+                srcSet={`${
                   import.meta.env.BASE_URL
                 }/images/desktop/index/heroSection2.png`}
               />
@@ -177,7 +177,7 @@ export default function BlogPage() {
             <picture>
               <source
                 media="(min-width: 375px)"
-                srcset={`${
+                srcSet={`${
                   import.meta.env.BASE_URL
                 }/images/desktop/blog/aboutSection.png`}
               />
@@ -307,3 +307,5 @@ export default function BlogPage() {
     </main>
   );
 }
+
+export default BlogPage;

@@ -34,8 +34,8 @@ const mediaList = [
 function MediaIcons() {
   return (
     <ul className="mediaIcons d-flex">
-      {mediaList.map((mediaList) => (
-        <li className="d-flex">
+      {mediaList.map((mediaList, i) => (
+        <li className="d-flex" key={i}>
           <a href={mediaList.link} className="mediaLink">
             <div className="mediaInfo">
               <img
