@@ -105,19 +105,13 @@
   .caseBottom-outer-wrapper {
     padding: 24px;
     background-color: #f5f5f5;
-    .caseCard {
-      max-width: 294px;
-    }
   }
   .caseInfo {
     .text {
       border-bottom: 1px solid #6c757d;
     }
-    .text p:not(:first-child) {
+    .text li {
       color: #4b4b4b;
-    }
-    .text p:not(:last-child) {
-      padding-bottom: 8px;
     }
     .bi-check-square-fill::before {
       color: $primary;
@@ -232,14 +226,6 @@
   .contentBottom-wrapper {
     padding: 40px 24px;
   }
-  .caseBottom-outer-wrapper {
-    .caseList {
-      flex-wrap: wrap;
-    }
-    .caseCard {
-      max-width: calc(50% - 24px) !important;
-    }
-  }
 }
 
 @media (max-width: 1200px) {
@@ -292,12 +278,6 @@
     padding-top: 64px;
     padding-bottom: 64px;
     flex-direction: column;
-  }
-  .caseBottom-outer-wrapper {
-    .caseCard {
-      max-width: none !important;
-      width: 100%;
-    }
   }
   .contactMe {
     padding-top: 64px;

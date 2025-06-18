@@ -191,28 +191,30 @@ function HomePage() {
           </div>
 
           <div className="caseBottom-outer-wrapper">
-            <ul className="d-flex gap-4 justify-content-between caseList">
+            <ul className="row row-cols-1 row-cols-md-2 row-cols-xxl-4 row-gap-4 caseList">
               {caseData.map((item, i) => (
-                <li className="col-md-6 col-xxl-3 caseCard" key={i}>
+                <li className="col" key={i}>
                   <div className="caseInfo">
                     <img
                       src={`${import.meta.env.BASE_URL}${item.img}`}
                       alt="人物圖片"
                     />
                     <div className="text py-3 mb-3">
-                      <p className="fs-4 fw-bolder">{item.title}</p>
-                      <p>
-                        <span className="pe-2">
-                          <i className="bi bi-check-square-fill"></i>
-                        </span>
-                        {item.content1}
-                      </p>
-                      <p>
-                        <span className="pe-2">
-                          <i className="bi bi-check-square-fill"></i>
-                        </span>
-                        {item.content2}
-                      </p>
+                      <h3 className="fs-4 fw-bolder mb-2">{item.title}</h3>
+                      <ul className="d-flex flex-column gap-2">
+                        <li>
+                          <span className="pe-2">
+                            <i className="bi bi-check-square-fill"></i>
+                          </span>
+                          {item.content1}
+                        </li>
+                        <li>
+                          <span className="pe-2">
+                            <i className="bi bi-check-square-fill"></i>
+                          </span>
+                          {item.content2}
+                        </li>
+                      </ul>
                     </div>
                     <a
                       href={item.podcastUrl}
@@ -221,7 +223,6 @@ function HomePage() {
                       前往聆聽 podcast
                     </a>
                   </div>
-                  <a href={item.link} className="mediaLink"></a>
                 </li>
               ))}
             </ul>
