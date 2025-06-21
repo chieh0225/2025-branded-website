@@ -258,22 +258,37 @@ function HomePage() {
                     立即訂閱，搶先掌握
                     <span className="highlight">前端 x 職涯</span>的獨家資訊！
                   </p>
-                  <form>
+                  <form
+                    action="https://github.us19.list-manage.com/subscribe/post?u=e80cf1781c65a014b29853dfc&amp;id=e94b37ec67&amp;f_id=00efc2e1f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    target="_blank"
+                    onSubmit={(e) => {
+                      setTimeout(() => e.target.reset(), 500); // Mailchimp 收到資料後延遲清空
+                    }}
+                  >
                     <input
                       type="text"
                       className="form-control fs-5 mb-2"
                       placeholder="請輸入您的大名"
                       required
+                      name="FNAME"
+                      id="mce-FNAME"
                     />
                     <input
                       type="email"
                       className="form-control fs-5 mb-4"
                       placeholder="請輸入您的電子信箱"
                       required
+                      name="EMAIL"
+                      id="mce-EMAIL"
                     />
                     <button
                       type="submit"
                       className="btn btn-outline-primary fw-bolder"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
                     >
                       啟動訂閱
                     </button>
